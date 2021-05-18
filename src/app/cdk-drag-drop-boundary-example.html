@@ -1,0 +1,16 @@
+<div class="example-boundary">
+  <div class="example-box1" cdkDragBoundary=".example-boundary" cdkDrag>
+    I can only be dragged within the dotted container
+  </div>
+</div>
+
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="example-box" *ngFor="let movie of movies" cdkDrag>
+    <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+    {{movie}}
+  </div>
+</div>
+
+<!-- Copyright 2021 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
